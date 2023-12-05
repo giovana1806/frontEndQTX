@@ -1,0 +1,36 @@
+<div class="card mt-3"> 
+    <div class="d-flex justify-content-between align-items-center p-3 bg-dark-subtle"> 
+        <h1 class="text-black">Departamentos</h1> 
+        <button class="btn btn-dark" [routerLink]="['novo']">Novo Departamento</button> 
+    </div> 
+     
+    <div class="card-body "> 
+        <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th>#</th> 
+                    <th>Departamento</th> 
+                    <th>Localidade</th>
+                    <th>Descrição de Atividades</th>
+                    <th>Email</th>
+                    <th></th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr *ngFor="let departamento of departamento"> 
+                    <td>{{ departamento.id }}</td> 
+                    <td>{{ departamento.nome }}</td>
+                    <td>{{ departamento.localidade }}</td>
+                    <td>{{ departamento.descricaoAtividades }}</td>
+                    <td>{{ departamento.email }}</td>
+                    <td>  
+                        <span class="d-flex justify-content-end"> 
+                            <button type="button" class="btn btn-success me-2" (click)="Editar(departamento.id)">Atualizar</button> 
+                            <button type="button" class="btn btn-danger" (click)="Excluir(departamento.id)">Deletar</button> 
+                        </span> 
+                    </td> 
+                </tr> 
+            </tbody> 
+        </table> 
+    </div> 
+</div> 

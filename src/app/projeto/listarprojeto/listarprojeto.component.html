@@ -1,0 +1,38 @@
+<div class="card mt-3"> 
+    <div class="d-flex justify-content-between align-items-center p-3 bg-dark-subtle"> 
+        <h1 class="text-black">Projeto</h1> 
+        <button class="btn btn-dark" [routerLink]="['novo']">Novo Projeto</button> 
+    </div> 
+     
+    <div class="card-body "> 
+        <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th>#</th> 
+                    <th>Projeto</th> 
+                    <th>Descrição</th>
+                    <th>Qt de Participantes</th>
+                    <th>Responsável</th>
+                    <th>Custo</th>
+                    <th></th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr *ngFor="let projeto of projeto"> 
+                    <td>{{ projeto.id }}</td> 
+                    <td>{{ projeto.nome }}</td>
+                    <td>{{ projeto.descricao }}</td>
+                    <td>{{ projeto.qtdeParticipantes }}</td>
+                    <td>{{ projeto.responsavel }}</td> 
+                    <td>{{ projeto.custo }}</td>
+                    <td>  
+                        <span class="d-flex justify-content-end"> 
+                            <button type="button" class="btn btn-success  me-2" (click)="Editar(projeto.id)">Atualizar</button> 
+                            <button type="button" class="btn btn-danger" (click)="Excluir(projeto.id)">Deletar</button> 
+                        </span> 
+                    </td> 
+                </tr> 
+            </tbody> 
+        </table> 
+    </div> 
+</div> 

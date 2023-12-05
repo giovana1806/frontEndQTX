@@ -1,0 +1,38 @@
+<div class="card mt-3"> 
+    <div class="d-flex justify-content-between align-items-center p-3 bg-dark-subtle"> 
+        <h1 class="text-black">Funcionários</h1> 
+        <button class="btn btn-dark" [routerLink]="['novo']">Novo Funcionário</button> 
+    </div> 
+     
+    <div class="card-body "> 
+        <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th>#</th> 
+                    <th>Funcionário</th> 
+                    <th>Cargo</th>
+                    <th>Salário</th>
+                    <th>Área de Atuação</th>
+                    <th>Local de Trabalho</th>
+                    <th></th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr *ngFor="let funcionario of funcionario"> 
+                    <td>{{ funcionario.id }}</td> 
+                    <td>{{ funcionario.nome }}</td>
+                    <td>{{ funcionario.cargo }}</td>
+                    <td>{{ funcionario.salario }}</td>
+                    <td>{{ funcionario.areaAtuacao }}</td> 
+                    <td>{{ funcionario.localTrabalho }}</td>
+                    <td>  
+                        <span class="d-flex justify-content-end"> 
+                            <button type="button" class="btn btn-success  me-2" (click)="Editar(funcionario.id)">Atualizar</button> 
+                            <button type="button" class="btn btn-danger" (click)="Excluir(funcionario.id)">Deletar</button> 
+                        </span> 
+                    </td> 
+                </tr> 
+            </tbody> 
+        </table> 
+    </div> 
+</div> 

@@ -1,0 +1,48 @@
+<div class="card p-3 mt-3 bg-dark-subtle"> 
+    <form class="row g-3 needs-validation" novalidate [formGroup]="form"> 
+        <div class="col-sm-12">
+            <label for="nome" class="form-label">Nome</label> 
+            <input type="text" class="form-control" id="nome"  
+            placeholder="Nome" formControlName="nome"> 
+            <div class="invalid-feedback"> 
+                Informe o nome do funcionário!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="cargo" class="form-label">Cargo</label> 
+            <input type="text" class="form-control" id="cargo"  
+            placeholder="Cargo" formControlName="cargo"> 
+            <div class="invalid-feedback"> 
+                Informe o cargo do funcionário!
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="salario" class="form-label">Salário</label> 
+            <input type="text" class="form-control" id="rg"  
+            placeholder="RG" formControlName="rg"> 
+            <div class="invalid-feedback"> 
+                Informe o salário do funcionário!
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="areaAtuacao" class="form-label">Área de Atuação</label> 
+            <input type="text" class="form-control" id="areaAtuacao"  
+            placeholder="Área de Atuação" formControlName="areaAtuacao"> 
+            <div class="invalid-feedback"> 
+                Informe a área de atuação do funcionário!
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="localTrabalho" class="form-label">Local de Trabalho</label> 
+            <input type="text" class="form-control" id="localTrabalho"  
+            placeholder="Local de Trabalho" formControlName="localTrabalho"> 
+            <div class="invalid-feedback"> 
+                Informe o local de trabalho! 
+            </div> 
+        </div>
+        <div class="col-12 d-flex justify-content-end"> 
+            <button class="btn btn-success me-2" type="submit" (click)="Salvar()">Salvar</button> 
+            <button class="btn btn-danger" type="submit" (click)="Cancelar()">Cancelar</button> 
+        </div> 
+    </form> 
+</div> 

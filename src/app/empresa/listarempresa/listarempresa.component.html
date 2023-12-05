@@ -1,0 +1,38 @@
+<div class="card mt-3"> 
+    <div class="d-flex justify-content-between align-items-center p-3 bg-dark-subtle"> 
+        <h1 class="text-black">Empresas</h1> 
+        <button class="btn btn-dark" [routerLink]="['novo']">Nova Empresa</button> 
+    </div> 
+     
+    <div class="card-body"> 
+        <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th>#</th> 
+                    <th>Empresa</th> 
+                    <th>CNPJ</th>
+                    <th>Endereço</th>
+                    <th>Sócios</th>
+                    <th>Faturamento</th>
+                    <th></th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr *ngFor="let empresa of empresa"> 
+                    <td>{{ empresa.id }}</td> 
+                    <td>{{ empresa.nome }}</td>
+                    <td>{{ empresa.cnpj }}</td>
+                    <td>{{ empresa.endereco }}</td>
+                    <td>{{ empresa.socios }}</td> 
+                    <td>{{ empresa.faturamento }}</td>
+                    <td>  
+                        <span class="d-flex justify-content-end"> 
+                            <button type="button" class="btn btn-success  me-2" (click)="Editar(empresa.id)">Atualizar</button> 
+                            <button type="button" class="btn btn-danger" (click)="Excluir(empresa.id)">Deletar</button> 
+                        </span> 
+                    </td> 
+                </tr> 
+            </tbody> 
+        </table> 
+    </div> 
+</div> 

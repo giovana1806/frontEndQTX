@@ -1,0 +1,48 @@
+<div class="card p-3 mt-3 bg-dark-subtle"> 
+    <form class="row g-3 needs-validation" novalidate [formGroup]="form"> 
+        <div class="col-sm-12">
+            <label for="nome" class="form-label">Nome</label> 
+            <input type="text" class="form-control" id="nome"  
+            placeholder="Nome" formControlName="nome"> 
+            <div class="invalid-feedback"> 
+                Informe o nome do fornecedor!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="cnpj" class="form-label">CNPJ</label> 
+            <input type="text" class="form-control" id="cnpj"  
+            placeholder="CNPJ" formControlName="cnpj"> 
+            <div class="invalid-feedback"> 
+                Informe o CNPJ do fornecedor!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="ie" class="form-label">IE</label> 
+            <input type="text" class="form-control" id="ie"  
+            placeholder="IE" formControlName="ie"> 
+            <div class="invalid-feedback"> 
+                Informe o IE do fornecedor!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="endereco" class="form-label">Endereço</label> 
+            <input type="text" class="form-control" id="endereco"  
+            placeholder="Endereço" formControlName="endereco"> 
+            <div class="invalid-feedback"> 
+                Informe o endereço do fornecedor!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="email" class="form-label">Email</label> 
+            <input type="text" class="form-control" id="email"  
+            placeholder="Email" formControlName="email"> 
+            <div class="invalid-feedback"> 
+                Informe o email do fornecedor!!! 
+            </div> 
+        </div>
+        <div class="col-12 d-flex justify-content-end"> 
+            <button class="btn btn-success me-2" type="submit" (click)="Salvar()">Salvar</button> 
+            <button class="btn btn-danger" type="submit" (click)="Cancelar()">Cancelar</button> 
+        </div> 
+    </form> 
+</div> 

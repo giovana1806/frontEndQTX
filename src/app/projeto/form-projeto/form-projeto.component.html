@@ -1,0 +1,48 @@
+<div class="card p-3 mt-3 bg-dark-subtle"> 
+    <form class="row g-3 needs-validation" novalidate [formGroup]="form"> 
+        <div class="col-sm-12">
+            <label for="nome" class="form-label">Nome</label> 
+            <input type="text" class="form-control" id="nome"  
+            placeholder="Nome" formControlName="nome"> 
+            <div class="invalid-feedback"> 
+                Informe o nome do projeto!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="descricao" class="form-label">Descrição</label> 
+            <input type="text" class="form-control" id="descricao"  
+            placeholder="Descrição" formControlName="descricao"> 
+            <div class="invalid-feedback"> 
+                Informe a descrição do projeto!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="qtdeParticipantes" class="form-label">Qt de Participantes</label> 
+            <input type="text" class="form-control" id="rg"  
+            placeholder="Qt de Participantes" formControlName="qtdeParticipantes"> 
+            <div class="invalid-feedback"> 
+                Informe a Qt de Participantes do projeto!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="responsavel" class="form-label">Responsável</label> 
+            <input type="text" class="form-control" id="responsavel"  
+            placeholder="Responsável" formControlName="responsavel"> 
+            <div class="invalid-feedback"> 
+                Informe o responsável do projeto!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="custo" class="form-label">Custo</label> 
+            <input type="text" class="form-control" id="custo"  
+            placeholder="Custo" formControlName="custo"> 
+            <div class="invalid-feedback"> 
+                Informe o custo do projeto!!! 
+            </div> 
+        </div>
+        <div class="col-12 d-flex justify-content-end"> 
+            <button class="btn btn-success me-2" type="submit" (click)="Salvar()">Salvar</button> 
+            <button class="btn btn-danger" type="submit" (click)="Cancelar()">Cancelar</button> 
+        </div> 
+    </form> 
+</div> 

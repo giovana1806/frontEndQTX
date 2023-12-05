@@ -1,0 +1,40 @@
+<div class="card p-3 mt-3 bg-dark-subtle"> 
+    <form class="row g-3 needs-validation" novalidate [formGroup]="form"> 
+        <div class="col-sm-12">
+            <label for="nome" class="form-label">Nome</label> 
+            <input type="text" class="form-control" id="nome"  
+            placeholder="Nome" formControlName="nome"> 
+            <div class="invalid-feedback"> 
+                Informe o nome do departamento!!! 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="localidade" class="form-label">Localidade</label> 
+            <input type="text" class="form-control" id="localidade"  
+            placeholder="Localidade" formControlName="localidade"> 
+            <div class="invalid-feedback"> 
+                Informe qual departamento. 
+            </div> 
+        </div> 
+        <div class="col-sm-12">
+            <label for="descricaoAtividades" class="form-label">Descrição de atividades</label> 
+            <input type="text" class="form-control" id="descricaoAtividades"  
+            placeholder="Descrição de atividades" formControlName="rg"> 
+            <div class="invalid-feedback"> 
+                Informe a descrição! 
+            </div> 
+        </div>  
+        <div class="col-sm-12">
+            <label for="email" class="form-label">Email</label> 
+            <input type="text" class="form-control" id="email"  
+            placeholder="Email" formControlName="email"> 
+            <div class="invalid-feedback"> 
+                Informe o email do departamento!!! 
+            </div> 
+        </div>
+        <div class="col-12 d-flex justify-content-end"> 
+            <button class="btn btn-success me-2" type="submit" (click)="Salvar()">Salvar</button> 
+            <button class="btn btn-danger" type="submit" (click)="Cancelar()">Cancelar</button> 
+        </div> 
+    </form> 
+</div> 
